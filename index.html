@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador De Texto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Encriptador de texto</title>
 </head>
 <body>
-   <div class="container">
-    <div class="encriptador">
-        <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí"></textarea>
-    <div class="terminos">
-        <p> Solo letras minúsculas y sin acentos</p>
-    </div>
-    <div class="botones">
-        <input type="button" class="btn-encriptar" value="Encriptar" onclick="encriptar()"/>
-        <input type="button" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()"/> 
-    </div>
-   </div> 
-   <div class="encriptado">
-        <img src="/img/personaje.png" alt="" id="personaje">
-        <div class="mensaje-encriptado" id="mensaje-encriptado">
-            <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-            <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-            <!-- <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea> -->
-        </div>
-    </div>
-</div>
+    <!-- Encabezado -->
+     <header>
+        <a href="#" rel="">
+            <img src="./img/Logo.png" alt="Logo de alura" class="logo">
+        </a>
+     </header>
+     <!-- Principal -->
+     <main>
+        <section class="encriptador">
+            <textarea class="encriptar" id="encriptador" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="encriptador-aviso">
+                <img src="./img/aviso.svg" alt="imagen aviso" class="img-aviso">
+                <p class="texto-aviso">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="contenedor-encriptador">
+                <button type="submit" class="btn-encriptar">Encriptar</button>
+                <button type="submit" class="btn-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="tarjeta">
+            <div class="contenedor-tarjeta">
+                <img src="./img/personaje.png" alt="Imagen personaje con lupa" class="img-personaje">
+                <p class="texto-principal">Ningún mensaje fue encontrado</p>
+                <p class="texto-parrafo">Ingrese el texto que desea encriptar o desencriptar</p>
+            </div>
+            <textarea type="mensaje" class="evaluar" readonly></textarea>
+            <button type="submit" class="btn-copiar">Copiar</button>
+        </section>
+     </main>
+     <!-- pie de pagina -->
+     <footer>
+        <p class="copyright">&copy; Encriptador de Texto - Desarrollado por Suárez Carla</p>
+     </footer> 
+
+     <script src="./Js/encriptador.js"></script>
 </body>
-    <script src="index.js"></script>
 </html>
